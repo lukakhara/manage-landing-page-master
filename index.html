@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Manage landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body class="pt-5 px-4 bg-white lg:px-30 flex flex-col gap-20">
+    <header class="flex relative justify-between items-baseline">
+      <img src="/images/logo.svg" alt="website icon" />
+      <nav id="mobileMenu" class="nav hidden">
+        <a
+          href=""
+          class="w-full text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 sm:hover:bg-transparent sm:hover:text-black"
+          >Pricing</a
+        >
+        <a
+          href=""
+          class="w-full text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 sm:hover:bg-none"
+          >Product</a
+        >
+        <a
+          href=""
+          class="w-full text-center l hover:cursor-pointer hover:text-white hover:bg-blue-300 sm:hover:bg-none"
+          >About Us</a
+        >
+        <a
+          href=""
+          class="w-full text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 sm:hover:bg-none"
+          >Careers</a
+        >
+        <a
+          href=""
+          class="w-full text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 sm:hover:bg-none"
+          >Community</a
+        >
+      </nav>
+      <button
+        class="hidden! sm:flex! text-nowrap orangeButton hover:cursor-pointer hover:opacity-80"
+      >
+        Get Started
+      </button>
+      <button id="hamburgerMenu" class="sm:hidden hover:cursor-pointer">
+        <img id="hamburgerIcon" src="/images/icon-hamburger.svg" alt="" />
+      </button>
+    </header>
+
+    <section class="border flex flex-col md:flex-row md:justify-between py-20">
+      <div class="order-none md:order-2">
+        <!-- ilustration intro 1 image -->
+        <img src="/images/illustration-intro.svg" alt="ilustration intro" />
+      </div>
+      <div
+        class="flex flex-col items-center md:justify-center md:items-start order-none md:order-1 md:gap-6"
+      >
+        <h1
+          class="text-4xl font-bold text-center text-primary-blue md:text-5xl md:text-start"
+        >
+          Bring everyone <span class="block"></span> together to build
+          <span class="block"></span>better products.
+        </h1>
+        <p class="text-neutral-light-gray">
+          Manage makes it simple for software<span class="block"></span> teams
+          to plan day-to-day tasks while keeping the<span class="block"></span>
+          larger team goals in view.
+        </p>
+        <button class="orangeButton hover:cursor-pointer">Get Started</button>
+      </div>
+    </section>
+
+    <section class="border flex gap-4 md:gap-30 flex-col md:flex-row">
+      <div class="text-center">
+        <h1
+          class="text-4xl font-bold text-primary-blue text-center md:text-left"
+        >
+          What’s different about<span class="block"></span> Manage?
+        </h1>
+        <p class="text-neutral-light-gray text-center md:text-left">
+          Manage provides all the functionality your<span class="block"></span>
+          team needs, without the complexity. Our<span class="block"></span>
+          software is tailor-made for modern digital<span class="block"></span>
+          product teams.
+        </p>
+      </div>
+      <div>
+        <!-- 01 -->
+        <div class="flex flex-row gap-2 flex-col">
+          <h1 class="orangeNumbering h-10 w-16">01</h1>
+          <div
+            class="flex gap-2 items-center relative sm:static items-start justify-start flex-col"
+          >
+            <div class="flex flex-col">
+              <h2 class="text-primary-blue font-bold p-2">
+                Track company-wide progress
+              </h2>
+              <span
+                class="bg-amber-100 absolute w-[85%] h-full left-13 -z-10 sm:hidden"
+              ></span>
+            </div>
+            <p class="text-neutral-light-gray">
+              See how your day-to-day tasks fit into the wider vision.<span
+                class="block"
+              ></span>
+              Go from tracking progress at the milestone level all the<span
+                class="block"
+              ></span>
+              way done to the smallest of<span class="block"></span> details.
+              Never lose sight of the bigger picture again.
+            </p>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div class="flex flex-col gap-2">
+          <div class="flex gap-2 items-center relative sm:static">
+            <h1 class="orangeNumbering h-10 w-16">02</h1>
+            <h2 class="text-primary-blue font-bold p-2">
+              Advanced built-in reports
+            </h2>
+            <span
+              class="bg-amber-100 absolute w-[85%] h-full left-13 -z-10 sm:hidden"
+            ></span>
+          </div>
+          <p class="text-neutral-light-gray place-self-end">
+            Set internal delivery estimates and track progress toward
+            <span class="block"></span> company goals. Our customisable
+            dashboard helps you<span class="block"></span> build out the reports
+            you need to keep key stakeholders<span class="block"></span>
+            informed.
+          </p>
+        </div>
+        <!-- 03 -->
+        <div class="flex flex-col gap-2">
+          <div class="flex gap-2 items-center relative sm:static">
+            <h1 class="orangeNumbering h-10 w-16">03</h1>
+            <h2 class="text-primary-blue font-bold p-2">
+              Everything you need in one place
+            </h2>
+            <span
+              class="bg-amber-100 absolute w-[85%] h-full left-13 -z-10 sm:hidden"
+            ></span>
+          </div>
+          <p class="text-neutral-light-gray place-self-end">
+            Stop jumping from one service to another to<span
+              class="block"
+            ></span>
+            communicate, store files, track tasks and share<span
+              class="block"
+            ></span>
+            documents. Manage offers an all-in-one team<span
+              class="block"
+            ></span>
+            productivity solution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonial section -->
+
+    <section class="flex flex-col items-center gap-2 pb-5">
+      <h1 class="text-primary-blue text-2xl text-center font-bold pb-8">
+        What they’ve said
+      </h1>
+      <div class="flex gap-4">
+        <!-- first column -->
+        <div
+          data-testimonial="0"
+          class="flex flex-col items-center gap-2 bg-[#f3f4f6fa] relative pb-10 flex-1"
+        >
+          <img
+            src="/images/avatar-anisha.png"
+            class="size-10 relative bottom-5"
+            alt="avatar of user anisha"
+          />
+          <h2 class="text-primary-blue font-bold">Anisha Li</h2>
+          <p class="text-center text-neutral-light-gray">
+            “Manage has supercharged our team’s workflow. The ability to
+            maintain visibility on larger milestones at all times keeps everyone
+            motivated.
+          </p>
+        </div>
+        <!-- second column -->
+        <div
+          data-testimonial="1"
+          class="flex flex-col items-center gap-2 bg-[#f3f4f6fa] relative pb-10 flex-1 hidden"
+        >
+          <img
+            src="/images/avatar-ali.png"
+            class="size-10 relative bottom-5"
+            alt="avatar of user anisha"
+          />
+          <h2 class="text-primary-blue font-bold">Ali Bravo</h2>
+          <p class="text-center text-neutral-light-gray">
+            “We have been able to cancel so many other subscriptions since using
+            Manage. There is no more cross-channel confusion and everyone is
+            much more focused.”
+          </p>
+        </div>
+        <!-- third column -->
+        <div
+          data-testimonial="2"
+          class="flex flex-col items-center gap-2 bg-[#f3f4f6fa] relative pb-10 flex-1 hidden"
+        >
+          <img
+            src="/images/avatar-richard.png"
+            class="size-10 relative bottom-5"
+            alt="avatar of user anisha"
+          />
+          <h2 class="text-primary-blue font-bold">Richard Watts</h2>
+          <p class="text-center text-neutral-light-gray">
+            “Manage allows us to provide structure and process. It keeps us
+            organized and focused. I can’t stop recommending them to everyone I
+            talk to!”
+          </p>
+        </div>
+        <!-- forth column -->
+        <div
+          data-testimonial="3"
+          class="flex flex-col items-center gap-2 bg-[#f3f4f6fa] relative pb-10 flex-1 hidden md:hidden!"
+        >
+          <img
+            src="/images/avatar-shanai.png"
+            class="size-10 relative bottom-5"
+            alt="avatar of user anisha"
+          />
+          <h2 class="text-primary-blue font-bold">Shanai Gough</h2>
+          <p class="text-center text-neutral-light-gray">
+            “Their software allows us to track, manage and collaborate on our
+            projects from anywhere. It keeps the whole team in-sync without
+            being intrusive.”
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-1 md:hidden">
+        <button
+          data-slide="0"
+          class="bg-primary-orange border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+        ></button>
+        <button
+          data-slide="1"
+          class="border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+        ></button>
+        <button
+          data-slide="2"
+          class="border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+        ></button>
+        <button
+          data-slide="3"
+          class="border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+        ></button>
+      </div>
+
+      <button class="orangeButton">Get Started</button>
+    </section>
+
+    <!-- <footer
+      class="bg-primary-blue text-white flex flex-col gap-6 pb-6 w-screen ml-[calc(-50vw+50%)] px-30"
+    >
+      <div
+        class="bg-primary-orange text-white flex flex-col md:flex-row gap-8 items-center justify-center py-10 w-screen ml-[calc(-50vw+50%)] md:justify-between px-30"
+      >
+        <h1 class="text-4xl text-center md:text-start">
+          Simplify how your team <span class="block"></span> works today.
+        </h1>
+        <button
+          class="orangeButton bg-white! text-primary-orange! cursor-pointer"
+        >
+          Get Started
+        </button>
+      </div>
+      <div class="md:flex ">
+        <div class="flex gap-2 justify-between order-3">
+          <input
+            type="text"
+            placeholder=" Updates in your inbox…"
+            class="bg-white text-neutral-gray rounded-4xl py-2 px-2"
+          />
+          <button class="orangeButton px-8! font-bold">Go</button>
+        </div>
+     
+        <img src="" alt="" />
+
+        <div class="flex justify-between order-2">
+          <nav class="flex flex-col gap-3">
+            <a href="">Home</a>
+            <a href="">Pricing</a>
+            <a href="">Products</a>
+            <a href="">About Us</a>
+          </nav>
+
+          <nav class="flex flex-col gap-3">
+            <a href="">Careers</a>
+            <a href="">Community</a>
+            <a href="">Privacy Policy</a>
+          </nav>
+        </div>
+
+      
+        <nav class="flex gap-4 justify-between">
+          <a href=""
+            ><img class="size-6" src="/images/icon-facebook.svg" alt="facebook"
+          /></a>
+          <a href=""
+            ><img class="size-6" src="/images/icon-youtube.svg" alt="youtube"
+          /></a>
+          <a href=""
+            ><img class="size-6" src="/images/icon-twitter.svg" alt="twitter"
+          /></a>
+          <a href=""
+            ><img
+              class="size-6"
+              src="/images/icon-pinterest.svg"
+              alt="pinterest"
+          /></a>
+          <a href=""
+            ><img
+              class="size-6"
+              src="/images/icon-instagram.svg"
+              alt="instagram"
+          /></a>
+        </nav>
+
+        <div class="flex justify-center text-white order-1">
+          <img src="/images/logo.svg" class="text-white" alt="logo" />
+        </div>
+
+        <div class="text-center order-3">Copyright 2020. All Rights Reserved</div>
+      </div>
+    </footer> -->
+
+    <!-- <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer> -->
+
+    <main
+      class="flex flex-col sm:grid sm:place-items-center ml-[calc(-50vw+50%)]  text-white  gap-6 pb-6 w-full px-32"
+    >
+      <div
+        class="bg-primary-orange text-white flex flex-col md:flex-row gap-8 items-center justify-center py-10 w-full ml-[calc(-50vw+50%)] md:justify-between "
+      >
+        <h1 class="text-4xl text-center md:text-start">
+          Simplify how your team <span class="block"></span> works today.
+        </h1>
+        <button
+          class="orangeButton bg-white! text-primary-orange! cursor-pointer"
+        >
+          Get Started
+        </button>
+      </div>
+      <footer
+        class="w-full border-t-2  bg-neutral-gray  px-8 py-16 text-footer-foreground  sm:px-12 sm:py-16 "
+      >
+        <div
+          class="mx-auto grid max-w-[1320px] grid-cols-2 gap-x-8 gap-y-14 sm:gap-x-16 lg:grid-cols-[1.15fr_1fr_1fr_1.35fr] lg:gap-x-20"
+        >
+          <!-- Logo + social -->
+          <div
+            class="order-4 col-span-2 flex flex-col-reverse items-center gap-12 lg:order-1 lg:col-span-1 lg:flex-col lg:items-start lg:justify-between lg:gap-20"
+          >
+            <a
+              href="#"
+              aria-label="Manage home"
+              class="flex items-center gap-3 text-3xl font-bold"
+            >
+              <span class="grid grid-cols-2 gap-1" aria-hidden="true">
+                <span class="size-1.5 rounded-full bg-brand"></span>
+                <span class="size-1.5 rounded-full bg-brand"></span>
+                <span class="size-1.5 rounded-full bg-brand"></span>
+                <span class="size-1.5 rounded-full bg-brand"></span>
+              </span>
+              manage
+            </a>
+
+            <nav aria-label="Social media" class="flex items-center gap-6">
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="transition-colors hover:text-brand"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="size-7 fill-current"
+                >
+                  <path
+                    d="M13.7 22v-9h3l.5-3.5h-3.5V7.3c0-1 .3-1.7 1.8-1.7h1.9V2.5c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.3H6.8V13h3.1v9h3.8Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="YouTube"
+                class="transition-colors hover:text-brand"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="size-7 fill-current"
+                >
+                  <path
+                    d="M23 7.1a3 3 0 0 0-2.1-2.2C19 4.4 12 4.4 12 4.4s-7 0-8.9.5A3 3 0 0 0 1 7.1 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.9 3 3 0 0 0 2.1 2.2c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.2 31 31 0 0 0 .5-4.9 31 31 0 0 0-.5-4.9ZM9.7 15.3V8.7l5.8 3.3-5.8 3.3Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="transition-colors hover:text-brand"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="size-7 fill-current"
+                >
+                  <path
+                    d="M21.5 6.2c-.7.3-1.5.5-2.3.6a4 4 0 0 0 1.8-2.2c-.8.5-1.7.8-2.6 1a4 4 0 0 0-6.9 3.7A11.4 11.4 0 0 1 3.2 5c-.9 1.5-.4 3.5 1.2 4.5-.7 0-1.3-.2-1.8-.5 0 2 1.4 3.8 3.3 4.2-.6.2-1.2.2-1.8.1.5 1.7 2 2.9 3.8 2.9a8.1 8.1 0 0 1-5 1.7H2a11.4 11.4 0 0 0 6.2 1.8c7.4 0 11.5-6.2 11.5-11.5v-.5c.7-.5 1.3-1.1 1.8-1.8v.3Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="Pinterest"
+                class="transition-colors hover:text-brand"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="size-7 fill-current"
+                >
+                  <path
+                    d="M12 1.5a10.5 10.5 0 0 0-3.8 20.3c-.1-1.7 0-3.6.4-5.2l1.4-5.8s-.3-.8-.3-1.9c0-1.8 1-3.1 2.4-3.1 1.1 0 1.6.8 1.6 1.8 0 1.1-.7 2.7-1.1 4.2-.3 1.3.7 2.4 2 2.4 2.3 0 4.1-2.5 4.1-6 0-3.2-2.3-5.4-5.6-5.4-3.8 0-6 2.9-6 5.8 0 1.1.4 2.3 1 3 .1.1.1.2.1.4l-.4 1.6c-.1.5-.5.6-.9.4-1.7-.8-2.7-3.2-2.7-5.1 0-4.2 3-8 8.7-8 4.6 0 8.1 3.3 8.1 7.6 0 4.5-2.9 8.2-6.8 8.2-1.3 0-2.6-.7-3-1.5l-.8 3.1c-.3 1.1-1.1 2.5-1.6 3.4 1 .3 2.1.5 3.2.5A10.5 10.5 0 1 0 12 1.5Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="transition-colors hover:text-brand"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class="size-7 fill-none stroke-current stroke-2"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    class="fill-current stroke-0"
+                  />
+                </svg>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Primary links -->
+          <nav aria-label="Main links" class="order-2 lg:order-2">
+            <ul class="space-y-5">
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Secondary links -->
+          <nav aria-label="Company links" class="order-3 lg:order-3">
+            <ul class="space-y-5">
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >Community</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-lg transition-colors hover:text-brand"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Email signup -->
+          <div class="order-1 col-span-2 lg:order-4 lg:col-span-1">
+            <form action="#" class="grid grid-cols-[minmax(0,1fr)_auto] gap-3">
+              <label for="updates-email" class="sr-only">Email address</label>
+              <input
+                id="updates-email"
+                type="email"
+                placeholder="Updates in your inbox…"
+                class="min-w-0 rounded-full border-0 bg-input-surface px-6 py-4 text-sm text-input-foreground outline-none placeholder:text-muted-foreground focus:ring-2 focus:ring-brand"
+              />
+              <button
+                type="submit"
+                class="rounded-full bg-brand px-7 py-4 text-sm font-bold text-brand-foreground transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-footer"
+              >
+                GO
+              </button>
+            </form>
+            <p
+              class="mt-14 hidden text-right text-sm text-muted-foreground lg:block"
+            >
+              Copyright 2020. All Rights Reserved
+            </p>
+          </div>
+
+          <p
+            class="order-5 col-span-2 text-center text-sm text-muted-foreground lg:hidden"
+          >
+            Copyright 2020. All Rights Reserved
+          </p>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
+
+<script>
+  const hamburgerMenuButton = document.getElementById("hamburgerMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+
+  hamburgerMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+
+    const isOpen = !mobileMenu.classList.contains("hidden");
+
+    if (isOpen) {
+      hamburgerIcon.src = "/images/icon-close.svg";
+      hamburgerIcon.alt = "Close menu";
+    } else {
+      hamburgerIcon.src = "/images/icon-hamburger.svg";
+      hamburgerIcon.alt = "Open menu";
+    }
+  });
+
+  const testimonials = document.querySelectorAll("[data-testimonial]");
+  const indicators = document.querySelectorAll("[data-slide]");
+
+  indicators.forEach((indicator) => {
+    indicator.addEventListener("click", () => {
+      const selectedSlide = indicator.dataset.slide;
+
+      testimonials.forEach((testimonial) => {
+        testimonial.classList.add("hidden");
+      });
+
+      const activeTestimonial = document.querySelector(
+        `[data-testimonial="${selectedSlide}"]`,
+      );
+
+      activeTestimonial.classList.remove("hidden");
+
+      // Remove active state from all dots
+      indicators.forEach((indicator) => {
+        indicator.classList.remove("bg-primary-orange");
+      });
+
+      // Add active state to clicked dot
+      indicator.classList.add("bg-primary-orange");
+    });
+  });
+</script>
