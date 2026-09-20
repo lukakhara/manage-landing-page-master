@@ -59,6 +59,10 @@
   display: block;
 }
 
+.test{
+  border:1px solid red;
+}
+
 @media (min-width: 640px) { /* sm: breakpoint */
   .nav {
     position: static;
