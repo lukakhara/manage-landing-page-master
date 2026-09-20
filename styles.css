@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme {
   /* Primary */
   --color-primary-orange: hsl(12 88% 59%);
@@ -13,11 +12,13 @@
 
   /* Font */
   --font-vietnam: "Be Vietnam Pro", sans-serif;
+   --breakpoint-nm: 43.75rem;
 }
 
 @layer base {
   html {
     font-size: 16px;
+    text:rgba(0, 0, 0, 0.534);
   }
 
   body {
@@ -25,12 +26,17 @@
   }
 }
 
-.orangeButton{
-  @apply bg-primary-orange text-white flex items-center justify-center rounded-4xl px-4  py-2
+@layer components {
+  .orangeButton {
+    @apply bg-primary-orange text-white flex items-center justify-center rounded-4xl px-6 py-3 shadow-[0_6px_6px_-1px_hsl(12_88%_79%)]
+    font-bold hover:opacity-80;
+  }
+  .orangeNumbering {
+  @apply bg-primary-orange text-white flex items-center justify-center rounded-4xl p-2;
 }
-.orangeNumbering{
-  @apply bg-primary-orange text-white flex items-center justify-center rounded-4xl p-2
 }
+
+
 
 .nav {
   background-color: #d1d5db; /* Tailwind gray-300 */
@@ -51,19 +57,46 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.hidden{
+.hidden-class {
   display: none;
 }
 
-.block{
+.block {
   display: block;
 }
 
-.test{
-  border:1px solid red;
+.test {
+  border: 1px solid red;
 }
 
-@media (min-width: 640px) { /* sm: breakpoint */
+.headerButton {
+  display: none;
+}
+
+@utility feature-heading {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .feature-heading::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 28px;
+    right: -1.5rem;
+    height: 2rem;
+    border-radius: 9999px 0 0 9999px;
+    background: rgb(240, 225, 197);
+  }
+
+  .feature-heading > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 700px) {
+  /* sm: breakpoint */
   .nav {
     position: static;
     flex-direction: row;
@@ -71,12 +104,12 @@
     border: none;
     transform: none;
     width: 100%;
-    gap:4px;
- 
+    gap: 10px;
   }
-  .hidden{
-  display: flex;
+  .hidden {
+    display: flex;
+  }
+  .headerButton {
+    display: flex;
   }
 }
-
-
