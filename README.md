@@ -1,109 +1,105 @@
-# Frontend Mentor - Manage landing page
+# Manage Landing Page
 
-![Design preview for the Manage landing page coding challenge](preview.jpg)
+A responsive landing page for **Manage**, a fictional team-productivity product. Built with HTML, Tailwind CSS and vanilla JavaScript as a portfolio project, based on the [Frontend Mentor](https://www.frontendmentor.io) "Manage landing page" challenge.
 
-## Welcome! 👋
+**[Live site](https://USERNAME.github.io/REPO/)** | **[Source code](https://github.com/USERNAME/REPO)**
 
-Thanks for checking out this front-end coding challenge.
+![Screenshot of the Manage landing page](./screenshot.png)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Table of contents
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+- [Features](#features)
+- [Built with](#built-with)
+- [Getting started](#getting-started)
+- [Deployment](#deployment)
+- [What I learned](#what-i-learned)
+- [Possible improvements](#possible-improvements)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## The challenge
+## Features
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+- Responsive layout that adapts to mobile, tablet and desktop screens
+- Mobile navigation menu with a hamburger / close icon toggle
+- Hover states on all interactive elements (links, buttons, social icons)
+- Testimonial slider on mobile with clickable pagination dots; all testimonials shown side by side on larger screens
+- Newsletter sign-up form with validation and error messages when:
+  - the email field is empty
+  - the email address is not formatted correctly
+- Decorative background patterns and an all-in-one footer with social links
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+## Built with
 
-Your users should be able to:
+- Semantic HTML5
+- [Tailwind CSS v4](https://tailwindcss.com) (CLI build)
+- Custom CSS for reusable components (buttons, hidden states)
+- Vanilla JavaScript (menu toggle, testimonial slider, form validation)
+- Mobile-first workflow
+- [Be Vietnam Pro](https://fonts.google.com/specimen/Be+Vietnam+Pro) via Google Fonts
+- [GitHub Pages](https://pages.github.com) for hosting
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- See all testimonials in a horizontal slider
-- Receive an error message when the newsletter sign up `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
+## Getting started
 
-### Want some support on the challenge? 
+Clone the repo and install dependencies:
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+```bash
+git clone https://github.com/USERNAME/REPO.git
+cd REPO
+npm install
+```
 
-## Where to find everything
+Build the CSS once:
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+```bash
+npm run build
+```
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+Or rebuild automatically while you work (add this script to `package.json` if you don't have it):
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+```json
+"scripts": {
+  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+  "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+}
+```
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+```bash
+npm run dev
+```
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+Then open `index.html` in your browser (or use the VS Code Live Server extension).
 
-## Using AI coding assistants
+## Deployment
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+The site is deployed with GitHub Pages from the `main` branch.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+1. Run `npm run build` so `dist/output.css` is up to date
+2. Commit and push, including `dist/` (make sure it is not in `.gitignore`)
+3. On GitHub: **Settings → Pages → Deploy from a branch → `main` / root**
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+All asset paths are relative (`./images/...`) so the site works under the `/REPO/` subpath.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+## What I learned
 
-## Building your project
+- Setting up the Tailwind v4 CLI and building CSS for a static site
+- Building a responsive layout with Tailwind breakpoints and CSS grid / flexbox
+- Handling UI state with vanilla JS (toggling classes for the menu and slider)
+- Validating forms with `checkValidity()` and showing accessible error messages
+- Why absolute paths (`/images/...`) break on GitHub Pages project sites, and how to fix them with relative paths
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+## Possible improvements
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Swipe gestures for the mobile testimonial slider
+- Keyboard and screen-reader support for the slider
+- Connect the newsletter form to a real backend or email service
+- Add page transitions and scroll animations
 
-## Deploying your project
+## Author
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+- Name: Luka Kharaishvili
+- GitHub: [@lukakhara](https://github.com/lukakhara)
+- LinkedIn: [Your name](https://www.linkedin.com/in/luka-kharaishvili-222066289/)
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+## Acknowledgments
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
-
-## Create a custom `README.md`
-
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
-
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
-
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
-
-## Submitting your solution
-
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
-
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
-
-## Sharing your solution
-
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
-
-The more specific you are with your questions, the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+Design and assets by [Frontend Mentor](https://www.frontendmentor.io). This is a practice project and is not affiliated with any real product.
