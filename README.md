@@ -1,4 +1,5 @@
 # Manage Landing Page
+![Design preview for the Manage landing page coding challenge](preview.jpg)
 
 A responsive landing page for **Manage**, a fictional team-productivity product. Built with HTML, Tailwind CSS and vanilla JavaScript as a portfolio project, based on the [Frontend Mentor](https://www.frontendmentor.io) "Manage landing page" challenge.
 
