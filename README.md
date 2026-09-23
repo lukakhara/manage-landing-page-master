@@ -1,6 +1,16 @@
 # Manage Landing Page
 ![Design preview for the Manage landing page coding challenge](preview.jpg)
 
+## Screenshots
+
+### Desktop
+
+![Homepage](./screenshots/homepage.png)
+
+### Mobile
+
+![Mobile version](./screenshots/mobile.png)
+
 A responsive landing page for **Manage**, a fictional team-productivity product. Built with HTML, Tailwind CSS and vanilla JavaScript as a portfolio project, based on the [Frontend Mentor](https://www.frontendmentor.io) "Manage landing page" challenge.
 
 **[Live site](https://USERNAME.github.io/REPO/)** | **[Source code](https://github.com/USERNAME/REPO)**
