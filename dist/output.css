@@ -9,7 +9,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: oklch(63.7% 0.237 25.331);
-    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -36,7 +35,6 @@
     --color-primary-blue: hsl(228 39% 23%);
     --color-neutral-gray: hsl(233 12% 13%);
     --color-neutral-light-gray: hsl(0 0% 68%);
-    --color-nav-hover: rgba(0, 0, 0, 0.634);
     --color-orange-light: hsl(12,81%,65%);
     --font-vietnam: "Be Vietnam Pro", sans-serif;
   }
@@ -604,9 +602,6 @@
     .hover\:bg-\[hsl\(12\,88\%\,79\%\)\]:hover {
       background-color: hsl(12,88%,79%);
     }
-    .hover\:bg-blue-300:hover {
-      background-color: var(--color-blue-300);
-    }
     .hover\:bg-primary-orange:hover {
       background-color: var(--color-primary-orange);
     }
@@ -828,9 +823,6 @@
     @media (hover: hover) {
       .lg\:hover\:bg-transparent:hover {
         background-color: transparent;
-      }
-      .lg\:hover\:text-nav-hover:hover {
-        color: var(--color-nav-hover);
       }
       .lg\:hover\:text-primary-orange:hover {
         color: var(--color-primary-orange);

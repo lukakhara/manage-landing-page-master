@@ -556,7 +556,7 @@
               </button>
               <span
                 id="emailError"
-                class="col-span-2 text-sm text-red-500 is-hidden"
+                class="col-span-2 text-sm text-red-500 hidden"
               >
                 Please insert a valid email
               </span>
@@ -622,14 +622,9 @@
       form.addEventListener("submit", (e) => {
         e.preventDefault(); // stop actual submission for now — remove once backend is wired up
 
-        const isEmpty = input.value === "";
         const isValid = input.checkValidity();
 
-        if (isEmpty) {
-          error.textContent = "Email address cannot be empty.";
-          error.classList.remove("is-hidden");
-          input.classList.add("text-red-500", "ring-2", "ring-red-500");
-        } else if (!isValid) {
+        if (isValid) {
           error.textContent = "Please enter a valid email address.";
           error.classList.remove("is-hidden");
           input.classList.add("text-red-500", "ring-2", "ring-red-500");
