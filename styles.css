@@ -10,15 +10,18 @@
   --color-neutral-orange: hsl(13 100% 96%);
   --color-neutral-light-gray: hsl(0 0% 68%);
 
+  --color-nav-hover: rgba(0, 0, 0, 0.634);
+  --color-orange-light:hsl(12,81%,65%);
+
   /* Font */
   --font-vietnam: "Be Vietnam Pro", sans-serif;
-   --breakpoint-nm: 43.75rem;
+  --breakpoint-nm: 43.75rem;
 }
 
 @layer base {
   html {
     font-size: 16px;
-    text-color:rgba(0, 0, 0, 0.534);
+    text-color: rgba(0, 0, 0, 0.534);
   }
 
   body {
@@ -32,11 +35,9 @@
     font-bold hover:opacity-80;
   }
   .orange-numbering {
-  @apply bg-primary-orange text-white flex items-center justify-center rounded-4xl p-2;
+    @apply bg-primary-orange text-white flex items-center justify-center rounded-4xl p-2;
+  }
 }
-}
-
-
 
 .nav {
   background-color: #d1d5db; /* Tailwind gray-300 */
@@ -56,7 +57,6 @@
   top: 175px;
   left: 50%;
   transform: translate(-50%, -50%);
-
 }
 .is-hidden {
   display: none !important;
@@ -73,8 +73,6 @@
 .header-button {
   display: none;
 }
-
-
 
 @utility feature-heading {
   position: relative;
@@ -109,8 +107,8 @@
     width: 100%;
     gap: 10px;
   }
-  .hidden {
-    display: flex;
+  .is-hidden {
+    display: flex !important;
   }
   .header-button {
     display: flex;

@@ -36,6 +36,8 @@
     --color-primary-blue: hsl(228 39% 23%);
     --color-neutral-gray: hsl(233 12% 13%);
     --color-neutral-light-gray: hsl(0 0% 68%);
+    --color-nav-hover: rgba(0, 0, 0, 0.634);
+    --color-orange-light: hsl(12,81%,65%);
     --font-vietnam: "Be Vietnam Pro", sans-serif;
   }
 }
@@ -310,13 +312,6 @@
   .inline-flex {
     display: inline-flex;
   }
-  .table {
-    display: table;
-  }
-  .size-2 {
-    width: calc(var(--spacing) * 2);
-    height: calc(var(--spacing) * 2);
-  }
   .size-2\.5 {
     width: calc(var(--spacing) * 2.5);
     height: calc(var(--spacing) * 2.5);
@@ -508,6 +503,9 @@
   .text-center {
     text-align: center;
   }
+  .text-left {
+    text-align: left;
+  }
   .text-right {
     text-align: right;
   }
@@ -566,10 +564,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .shadow-none {
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow-none\! {
     --tw-shadow: 0 0 #0000 !important;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow) !important;
@@ -580,10 +574,6 @@
   }
   .ring-red-500 {
     --tw-ring-color: var(--color-red-500);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -611,14 +601,14 @@
     .hover\:cursor-pointer:hover {
       cursor: pointer;
     }
-    .hover\:bg-\[hsl\(12\,81\%\,51\%\)\]:hover {
-      background-color: hsl(12,81%,51%);
-    }
     .hover\:bg-\[hsl\(12\,88\%\,79\%\)\]:hover {
       background-color: hsl(12,88%,79%);
     }
     .hover\:bg-blue-300:hover {
       background-color: var(--color-blue-300);
+    }
+    .hover\:bg-primary-orange:hover {
+      background-color: var(--color-primary-orange);
     }
     .hover\:text-\[hsl\(12\,88\%\,79\%\)\]\!:hover {
       color: hsl(12,88%,79%) !important;
@@ -631,9 +621,6 @@
     }
     .hover\:opacity-80:hover {
       opacity: 80%;
-    }
-    .hover\:opacity-90:hover {
-      opacity: 90%;
     }
     .hover\:opacity-100\!:hover {
       opacity: 100% !important;
@@ -650,6 +637,9 @@
   .focus\:outline-none:focus {
     --tw-outline-style: none;
     outline-style: none;
+  }
+  .aria-current\:bg-primary-orange[aria-current="true"] {
+    background-color: var(--color-primary-orange);
   }
   @media (width >= 40rem) {
     .sm\:grid {
@@ -839,12 +829,20 @@
       .lg\:hover\:bg-transparent:hover {
         background-color: transparent;
       }
-      .lg\:hover\:bg-none:hover {
-        background-image: none;
+      .lg\:hover\:text-nav-hover:hover {
+        color: var(--color-nav-hover);
       }
-      .lg\:hover\:text-\[rgba\(0\,0\,0\,0\.634\)\]:hover {
-        color: rgba(0,0,0,0.634);
+      .lg\:hover\:text-primary-orange:hover {
+        color: var(--color-primary-orange);
       }
+    }
+  }
+  @media (hover: hover) {
+    .\[\&\:not\(\[aria-current\=\'true\'\]\)\]\:hover\:bg-orange-light:not([aria-current='true']):hover {
+      background-color: var(--color-orange-light);
+    }
+    .\[\&\:not\(\[aria-current\=\'true\'\]\)\]\:hover\:opacity-90:not([aria-current='true']):hover {
+      opacity: 90%;
     }
   }
 }
@@ -944,8 +942,8 @@
     width: 100%;
     gap: 10px;
   }
-  .hidden {
-    display: flex;
+  .is-hidden {
+    display: flex !important;
   }
   .header-button {
     display: flex;
@@ -1069,11 +1067,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-blur {
   syntax: "*";
   inherits: false;
@@ -1161,7 +1154,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;

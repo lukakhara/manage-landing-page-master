@@ -34,27 +34,27 @@
       >
         <a
           href=""
-          class="w-full lg:w-auto text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 lg:hover:bg-transparent lg:hover:bg-none lg:hover:text-[rgba(0,0,0,0.634)]"
+          class="w-full lg:w-auto text-center hover:text-white hover:bg-primary-orange lg:hover:bg-transparent lg:hover:text-primary-orange transition-colors"
           >Pricing</a
         >
         <a
           href=""
-          class="w-full lg:w-auto text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 lg:hover:bg-none lg:hover:bg-transparent lg:hover:text-[rgba(0,0,0,0.634)]"
+          class="w-full lg:w-auto text-center hover:text-white hover:bg-primary-orange lg:hover:bg-transparent lg:hover:text-primary-orange transition-colors"
           >Product</a
         >
         <a
           href=""
-          class="w-full lg:w-auto text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 lg:hover:bg-none lg:hover:bg-transparent lg:hover:text-[rgba(0,0,0,0.634)]"
+          class="w-full lg:w-auto text-center hover:text-white hover:bg-primary-orange lg:hover:bg-transparent lg:hover:text-primary-orange transition-colors"
           >About Us</a
         >
         <a
           href=""
-          class="w-full lg:w-auto text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 lg:hover:bg-transparent lg:hover:bg-none lg:hover:text-[rgba(0,0,0,0.634)]"
+          class="w-full lg:w-auto text-center hover:text-white hover:bg-primary-orange lg:hover:bg-transparent lg:hover:text-primary-orange transition-colors"
           >Careers</a
         >
         <a
           href=""
-          class="w-full lg:w-auto text-center hover:cursor-pointer hover:text-white hover:bg-blue-300 lg:hover:bg-transparent lg:hover:bg-none lg:hover:text-[rgba(0,0,0,0.634)]"
+          class="w-full lg:w-auto text-center hover:text-white hover:bg-primary-orange lg:hover:bg-transparent lg:hover:text-primary-orange transition-colors"
           >Community</a
         >
       </nav>
@@ -89,13 +89,13 @@
           Bring everyone <span class="block"></span> together to build
           <span class="block"></span>better products.
         </h1>
-        <p class="text-neutral-light-gray text-center">
-          Manage makes it simple for software teams<span
+        <p class="text-neutral-light-gray text-center md:text-left">
+          Manage makes it simple for software teams<br
             class="hidden md:block"
-          ></span>
-          to plan day-to-day tasks while keeping the<span
+          />
+          to plan day-to-day tasks while keeping the<br
             class="hidden md:block"
-          ></span>
+          />
           larger team goals in view.
         </p>
         <button class="orange-button hover:cursor-pointer">Get Started</button>
@@ -116,22 +116,20 @@
     <section
       class="relative mx-auto grid w-full gap-12 md:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] md:gap-20 md:pb-16 lg:gap-32 lg:py-[72px]"
     >
-      <div class="text-center flex flex-col gap-4">
+      <div class="flex flex-col gap-4">
         <h1
           class="text-3xl md:text-4xl font-bold text-primary-blue text-center md:text-left"
         >
           What’s different about <span class="hidden md:block"></span>Manage?
         </h1>
-        <p class="text-neutral-light-gray text-center md:text-left">
-          Manage provides all the functionality your<span
+        <p class="text-neutral-light-gray text-left">
+          Manage provides all the functionality your<br
             class="hidden md:block"
-          ></span>
-          team needs, without the complexity. Our<span
+          />
+          team needs, without the complexity. Our<br class="hidden md:block" />
+          software is tailor-made for modern digital<br
             class="hidden md:block"
-          ></span>
-          software is tailor-made for modern digital<span
-            class="hidden md:block"
-          ></span>
+          />
           product teams.
         </p>
       </div>
@@ -317,19 +315,20 @@
       <div class="flex gap-1 md:hidden">
         <button
           data-slide="0"
-          class="border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+          class="border-primary-orange border-2 size-2.5 rounded-full aria-current:bg-primary-orange [&:not([aria-current='true'])]:hover:bg-orange-light [&:not([aria-current='true'])]:hover:opacity-90 hover:cursor-pointer"
         ></button>
         <button
           data-slide="1"
-          class="bg-primary-orange border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+          aria-current="true"
+          class="border-primary-orange border-2 size-2.5 rounded-full aria-current:bg-primary-orange [&:not([aria-current='true'])]:hover:bg-orange-light [&:not([aria-current='true'])]:hover:opacity-90 hover:cursor-pointer"
         ></button>
         <button
           data-slide="2"
-          class="border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+          class="border-primary-orange border-2 size-2.5 rounded-full aria-current:bg-primary-orange [&:not([aria-current='true'])]:hover:bg-orange-light [&:not([aria-current='true'])]:hover:opacity-90 hover:cursor-pointer"
         ></button>
         <button
           data-slide="3"
-          class="border-primary-orange border-2 size-2.5 rounded-full hover:opacity-90 hover:bg-[hsl(12,81%,51%)] hover:cursor-pointer"
+          class="border-primary-orange border-2 size-2.5 rounded-full aria-current:bg-primary-orange [&:not([aria-current='true'])]:hover:bg-orange-light [&:not([aria-current='true'])]:hover:opacity-90 hover:cursor-pointer"
         ></button>
       </div>
 
@@ -604,23 +603,15 @@
         indicator.addEventListener("click", () => {
           const selectedSlide = indicator.dataset.slide;
 
-          testimonials.forEach((testimonial) => {
-            testimonial.classList.add("is-hidden");
-          });
-
-          const activeTestimonial = document.querySelector(
-            `[data-testimonial="${selectedSlide}"]`,
+          testimonials.forEach((testimonial) =>
+            testimonial.classList.add("is-hidden"),
           );
+          document
+            .querySelector(`[data-testimonial="${selectedSlide}"]`)
+            .classList.remove("is-hidden");
 
-          activeTestimonial.classList.remove("is-hidden");
-
-          // Remove active state from all dots
-          indicators.forEach((indicator) => {
-            indicator.classList.remove("bg-primary-orange");
-          });
-
-          // Add active state to clicked dot
-          indicator.classList.add("bg-primary-orange");
+          indicators.forEach((btn) => btn.removeAttribute("aria-current"));
+          indicator.setAttribute("aria-current", "true");
         });
       });
 
